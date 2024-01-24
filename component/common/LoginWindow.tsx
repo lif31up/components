@@ -46,31 +46,30 @@ function LoginWindow({ className }: Default): React.JSX.Element {
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="mb-4">
-        <h1>{"email: " + userData.current.email}</h1>
-        <h2>{"password: " + userData.current.password}</h2>
+        <h1>{"ID: " + userData.current.email}</h1>
+        <h2>{"PW: " + userData.current.password}</h2>
       </div>
       <div>
-        <label className="text-xl mr-4">Email</label>
+        <label className="text-xl mr-4">ID: </label>
         <input
           className="border"
           type="text"
           autoComplete="off"
           {...register("email", {
-            required: "Email is required",
-            pattern: /^\S+@\S+$/i,
+            required: "입력하신 아이디는 이메일 형식이 아닙니다.",
           })}
         />
-        {errors.email && <p>{errors.email.message}</p>}
       </div>
 
       <div className="mt-2">
-        <label className="text-xl mr-4">Password</label>
+        <label className="text-xl mr-4">PW: </label>
         <input
           className="border"
           type="password"
-          {...register("password", { required: "Password is required" })}
+          {...register("password", {
+            required: "비밀번호는 반드시 9자 이상이어야 합니다.",
+          })}
         />
-        {errors.password && <p>{errors.password.message}</p>}
       </div>
       <button className="mt-8 bg-neutral-300 px-6 py-2" type="submit">
         확인
