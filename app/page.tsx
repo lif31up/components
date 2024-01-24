@@ -4,7 +4,7 @@ import LoginSection from "@/component/section/LoginSection";
 
 export default function Home(): React.JSX.Element {
   return (
-    <main>
+    <main className="bg-white">
       <ScrollerSection />
       <LoginSection />
     </main>
