@@ -37,11 +37,12 @@ function LoginWindow({ className }: Default): React.JSX.Element {
     console.log(`email: ${data?.email}\npassword: ${data?.password}`);
   };
   const style: TailwindProperties = {
+    sm: "w-80",
     base: "w-full p-6 shadow border bg-white rounded-2xl text-black",
   };
   return (
     <form
-      className={`${style.base} ${className}`}
+      className={`${style.sm} ${style.base} ${className}`}
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="mb-4">
