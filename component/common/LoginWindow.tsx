@@ -37,12 +37,11 @@ function LoginWindow({ className }: Default): React.JSX.Element {
     console.log(`email: ${data?.email}\npassword: ${data?.password}`);
   };
   const style: TailwindProperties = {
-    sm: "",
-    base: "w-fit p-6 shadow border bg-white rounded-2xl",
+    base: "w-full p-6 shadow border bg-white rounded-2xl text-black",
   };
   return (
     <form
-      className={`${style.sm} ${style.base} ${className}`}
+      className={`${style.base} ${className}`}
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="mb-4">
@@ -52,7 +51,7 @@ function LoginWindow({ className }: Default): React.JSX.Element {
       <div>
         <label className="text-xl mr-4">ID: </label>
         <input
-          className="border"
+          className="border-black border"
           type="text"
           autoComplete="off"
           {...register("email", {
@@ -64,7 +63,7 @@ function LoginWindow({ className }: Default): React.JSX.Element {
       <div className="mt-2">
         <label className="text-xl mr-4">PW: </label>
         <input
-          className="border"
+          className="border-black border"
           type="password"
           {...register("password", {
             required: "비밀번호는 반드시 9자 이상이어야 합니다.",
