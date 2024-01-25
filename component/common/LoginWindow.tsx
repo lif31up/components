@@ -38,7 +38,7 @@ function LoginWindow({ className }: Default): React.JSX.Element {
   };
   const style: TailwindProperties = {
     sm: "w-80",
-    base: "w-full p-6 shadow border bg-white rounded-2xl text-black",
+    base: "w-full p-6 shadow border bg-white text-black",
   };
   return (
     <form
