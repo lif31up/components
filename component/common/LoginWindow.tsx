@@ -37,7 +37,7 @@ function LoginWindow({ className }: Default): React.JSX.Element {
     console.log(`email: ${data?.email}\npassword: ${data?.password}`);
   };
   const style: TailwindProperties = {
-    sm: "w-80",
+    sm: "sm:w-80",
     base: "w-full p-6 shadow border bg-white text-black",
   };
   return (
@@ -50,9 +50,9 @@ function LoginWindow({ className }: Default): React.JSX.Element {
         <h2>{"PW: " + userData.current.password}</h2>
       </div>
       <div>
-        <label className="text-xl mr-4">ID: </label>
+        <label className="inline-block text-xl w-1/5 h-fit">ID: </label>
         <input
-          className="border-black border"
+          className="border-black border w-4/5"
           type="text"
           autoComplete="off"
           {...register("email", {
@@ -62,9 +62,9 @@ function LoginWindow({ className }: Default): React.JSX.Element {
       </div>
 
       <div className="mt-2">
-        <label className="text-xl mr-4">PW: </label>
+        <label className="inline-block text-xl w-1/5 h-fit">PW: </label>
         <input
-          className="border-black border"
+          className="border-black border w-4/5"
           type="password"
           {...register("password", {
             required: "비밀번호는 반드시 9자 이상이어야 합니다.",
