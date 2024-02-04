@@ -1,5 +1,5 @@
 import React from "react";
-import HorizontalScroller from "@/component/common/HorizontalScroller";
+import HorizontalScroller from "@/component/feature/HorizontalScroller";
 import Default from "@/util/interface";
 import TailwindProperties from "@/util/tailwindProperties";
 import Heading from "@/component/common/Heading";
