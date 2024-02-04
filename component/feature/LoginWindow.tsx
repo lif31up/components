@@ -3,27 +3,15 @@
 import React, { useRef } from "react";
 import Default from "@/util/interface";
 import TailwindProperties from "@/util/tailwindProperties";
-import {
-  FieldErrors,
-  FieldValues,
-  useForm,
-  UseFormHandleSubmit,
-  UseFormRegister,
-} from "react-hook-form";
+import { FieldErrors, useForm } from "react-hook-form";
 
-interface UseForm {
-  register: UseFormRegister<FieldValues>;
-  handleSubmit: UseFormHandleSubmit<FieldValues>;
-  formState: { errors: FieldErrors };
-}
-
-interface Form {
+type FormData = {
   email: string;
   password: string;
-}
+};
 
 function LoginWindow({ className }: Default): React.JSX.Element {
-  const userData: React.MutableRefObject<Form> = useRef({
+  const userData: React.MutableRefObject<FormData> = useRef({
     email: "",
     password: "",
   });
@@ -31,10 +19,9 @@ function LoginWindow({ className }: Default): React.JSX.Element {
     register,
     handleSubmit,
     formState: { errors },
-  }: UseForm = useForm();
-  const onSubmit = (data: Form | FieldErrors): void => {
-    userData.current = data as Form;
-    console.log(`email: ${data?.email}\npassword: ${data?.password}`);
+  } = useForm<FormData>();
+  const onSubmit = (data: FormData | FieldErrors): void => {
+    userData.current = data as FormData;
   };
   const style: TailwindProperties = {
     sm: "sm:w-80",
@@ -57,8 +44,10 @@ function LoginWindow({ className }: Default): React.JSX.Element {
           autoComplete="off"
           {...register("email", {
             required: "입력하신 아이디는 이메일 형식이 아닙니다.",
+            pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
           })}
         />
+        {errors.email && <p>{errors.email.message}</p>}
       </div>
 
       <div className="mt-2">
@@ -66,10 +55,14 @@ function LoginWindow({ className }: Default): React.JSX.Element {
         <input
           className="border-black border w-4/5"
           type="password"
+          autoComplete="off"
           {...register("password", {
-            required: "비밀번호는 반드시 9자 이상이어야 합니다.",
+            required:
+              "비밀번호는 하나 이상의 대문자와 숫자로 구성된 여덟 자리여야 합니다.",
+            pattern: /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/,
           })}
         />
+        {errors.password && <p>{errors.password.message}</p>}
       </div>
       <button className="mt-8 bg-neutral-300 px-6 py-2" type="submit">
         확인
