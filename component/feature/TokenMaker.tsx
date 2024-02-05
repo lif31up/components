@@ -22,8 +22,8 @@ function TokenMaker({ className }: Default) {
     await handleLogout(setAtom);
   };
   const style: TailwindProperties = {
-    sm: "",
-    base: "flex items-center",
+    sm: "sm:flex sm:items-center",
+    base: "grid",
   };
   return (
     <div className={`${style.sm} ${style.base} ${className}`}>
