@@ -18,9 +18,9 @@ function PopUpSection({ className }: Default) {
     <section className={`${style.sm} ${style.base} ${className}`}>
       <Heading
         data={{
-          filename: "LoginWindow.tsx",
-          title: "로그인 창",
-          desc: "사용자가 로그인 정보를 입력할 수 있게 하는 요소입니다. 리액트 후크 폼을 통해 작성했습니다.",
+          filename: "PopUp.tsx",
+          title: "팝업",
+          desc: "리액트돔 포탈을 이용해서 팝업을 구현했습니다. 아래 버튼을 눌러서 확인할 수 있습니다.",
           href: "https://github.com/lif31up/components",
         }}
       />
@@ -35,8 +35,8 @@ function PopUpSection({ className }: Default) {
       <PopUp isOpen={isPopUp} onClose={closePopUp}>
         <h1 className="text-xl font-bold">PopUp.tsx</h1>
         <p>
-          리액트돔 포탈을 이용해서 팝업을 구현했습니다. 눌러서 제거할 수
-          있습니다.
+          리액트돔 포탈을 이용해서 팝업을 구현했습니다. 아래 버튼을 눌러서
+          확인할 수 있습니다.
         </p>
       </PopUp>
     </section>
