@@ -1,7 +1,7 @@
 import React from "react";
 import HorizontalScroller from "@/component/feature/HorizontalScroller";
-import Default from "@/util/interface";
-import TailwindProperties from "@/util/tailwindProperties";
+import Default from "@/utils/interface";
+import TailwindProperties from "@/utils/tailwindProperties";
 import Heading from "@/component/common/Heading";
 
 function ScrollerSection({ className }: Default): React.JSX.Element {

@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useRef } from "react";
-import Default from "@/util/interface";
-import TailwindProperties from "@/util/tailwindProperties";
+import Default from "@/utils/interface";
+import TailwindProperties from "@/utils/tailwindProperties";
 import { FieldErrors, useForm } from "react-hook-form";
 
 type FormData = {

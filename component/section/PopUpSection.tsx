@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import PopUp from "@/component/feature/PopUp";
-import Default from "@/util/interface";
-import TailwindProperties from "@/util/tailwindProperties";
+import Default from "@/utils/interface";
+import TailwindProperties from "@/utils/tailwindProperties";
 import Heading from "@/component/common/Heading";
 
 function PopUpSection({ className }: Default) {

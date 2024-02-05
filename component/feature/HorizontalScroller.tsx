@@ -1,6 +1,6 @@
 import React from "react";
-import TailwindProperties from "@/util/tailwindProperties";
-import Default from "@/util/interface";
+import TailwindProperties from "@/utils/tailwindProperties";
+import Default from "@/utils/interface";
 
 interface HorizontalScroller extends Default {
   children: Array<React.ReactNode>;
