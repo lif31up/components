@@ -6,9 +6,9 @@ import PopUpSection from "@/component/section/PopUpSection";
 export default function Home(): React.JSX.Element {
   return (
     <main>
-      <PopUpSection />
       <ScrollerSection className="mt-4" />
       <LoginSection className="mt-4" />
+      <PopUpSection className="mt-4" />
     </main>
   );
 }
