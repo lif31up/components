@@ -17,7 +17,6 @@ function Navigator({ className, id }: Default) {
       <div className="w-full h-16 px-8 fixed top-0 left-0 z-40 bg-neutral-200">
         <h1 className="text-xl font-bold">{token}</h1>
       </div>
-      <div className={"h-16"} />
     </section>
   );
 }
