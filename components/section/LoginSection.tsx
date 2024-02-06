@@ -1,7 +1,7 @@
 import React from "react";
 import PropsInterface from "@/utils/propsInterface";
-import LoginWindow from "@/component/feature/LoginWindow";
-import Heading from "@/component/common/Heading";
+import LoginWindow from "@/components/feature/LoginWindow";
+import Heading from "@/components/common/Heading";
 import { heading } from "@/styles/common";
 
 function LoginSection({ className }: PropsInterface) {

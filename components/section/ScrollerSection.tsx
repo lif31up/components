@@ -1,8 +1,8 @@
 import React from "react";
-import HorizontalScroller from "@/component/feature/HorizontalScroller";
+import HorizontalScroller from "@/components/feature/HorizontalScroller";
 import PropsInterface from "@/utils/propsInterface";
 import TailwindProperties from "@/styles/tailwindProperties";
-import Heading from "@/component/common/Heading";
+import Heading from "@/components/common/Heading";
 import { heading } from "@/styles/common";
 
 function ScrollerSection({ className }: PropsInterface) {

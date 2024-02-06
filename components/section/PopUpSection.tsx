@@ -1,10 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import PopUp from "@/component/feature/PopUp";
+import PopUp from "@/components/feature/PopUp";
 import PropsInterface from "@/utils/propsInterface";
 import TailwindProperties from "@/styles/tailwindProperties";
-import Heading from "@/component/common/Heading";
+import Heading from "@/components/common/Heading";
 import { heading } from "@/styles/common";
 
 function PopUpSection({ className }: PropsInterface) {

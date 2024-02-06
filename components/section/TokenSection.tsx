@@ -1,12 +1,11 @@
 "use client";
 
 import React from "react";
-import Heading from "@/component/common/Heading";
-import TailwindProperties from "@/styles/tailwindProperties";
+import Heading from "@/components/common/Heading";
 import PropsInterface from "@/utils/propsInterface";
-import TokenMaker from "@/component/feature/TokenMaker";
+import TokenMaker from "@/components/feature/TokenMaker";
 import { RecoilRoot } from "recoil";
-import Navigator from "@/component/common/Navigator";
+import Navigator from "@/components/common/Navigator";
 import { heading } from "@/styles/common";
 
 function TokenSection({ className }: PropsInterface) {

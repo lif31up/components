@@ -1,8 +1,8 @@
 import React from "react";
-import ScrollerSection from "@/component/section/ScrollerSection";
-import LoginSection from "@/component/section/LoginSection";
-import PopUpSection from "@/component/section/PopUpSection";
-import TokenSection from "@/component/section/TokenSection";
+import ScrollerSection from "@/components/section/ScrollerSection";
+import LoginSection from "@/components/section/LoginSection";
+import PopUpSection from "@/components/section/PopUpSection";
+import TokenSection from "@/components/section/TokenSection";
 
 export default function Home(): React.JSX.Element {
   return (
