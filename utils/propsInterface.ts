@@ -1,4 +1,4 @@
-export default interface Default {
+export default interface PropsInterface {
   className?: string;
   id?: string;
   title?: string;

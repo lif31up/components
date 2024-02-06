@@ -1,13 +1,13 @@
 import React from "react";
-import Default from "@/utils/interface";
-import TailwindProperties from "@/utils/tailwindProperties";
+import PropsInterface from "@/utils/propsInterface";
+import TailwindProperties from "@/styles/tailwindProperties";
 interface Data {
   filename: string;
   title: string;
   desc: string;
   href: string;
 }
-interface Heading extends Default {
+interface Heading extends PropsInterface {
   data: Data;
 }
 function Heading({ className, data }: Heading) {

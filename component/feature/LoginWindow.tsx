@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useRef } from "react";
-import Default from "@/utils/interface";
-import TailwindProperties from "@/utils/tailwindProperties";
+import PropsInterface from "@/utils/propsInterface";
+import TailwindProperties from "@/styles/tailwindProperties";
 import { FieldErrors, useForm } from "react-hook-form";
 
 type FormData = {
@@ -10,7 +10,7 @@ type FormData = {
   password: string;
 };
 
-function LoginWindow({ className }: Default) {
+function LoginWindow({ className }: PropsInterface) {
   const userData: React.MutableRefObject<FormData> = useRef({
     email: "",
     password: "",

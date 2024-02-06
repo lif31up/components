@@ -1,8 +1,8 @@
 import React from "react";
-import TailwindProperties from "@/utils/tailwindProperties";
-import Default from "@/utils/interface";
+import TailwindProperties from "@/styles/tailwindProperties";
+import PropsInterface from "@/utils/propsInterface";
 
-interface HorizontalScroller extends Default {
+interface HorizontalScroller extends PropsInterface {
   children: Array<React.ReactNode>;
 }
 function HorizontalScroller({ className, children }: HorizontalScroller) {
@@ -24,7 +24,7 @@ function HorizontalScroller({ className, children }: HorizontalScroller) {
 }
 export default HorizontalScroller;
 
-function Item({ children }: Default): React.JSX.Element {
+function Item({ children }: PropsInterface): React.JSX.Element {
   const style: TailwindProperties = {
     sm: "sm:mx-8",
     base: "inline-block mx-2",

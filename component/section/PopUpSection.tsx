@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import PopUp from "@/component/feature/PopUp";
-import Default from "@/utils/interface";
-import TailwindProperties from "@/utils/tailwindProperties";
+import PropsInterface from "@/utils/propsInterface";
+import TailwindProperties from "@/styles/tailwindProperties";
 import Heading from "@/component/common/Heading";
 import { heading } from "@/styles/common";
 
-function PopUpSection({ className }: Default) {
+function PopUpSection({ className }: PropsInterface) {
   const [isPopUp, setIsPupUp] = useState(false);
   const openPopUp = () => setIsPupUp(true);
   const closePopUp = () => setIsPupUp(false);

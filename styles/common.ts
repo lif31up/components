@@ -1,4 +1,4 @@
-import TailwindProperties from "@/utils/tailwindProperties";
+import TailwindProperties from "@/styles/tailwindProperties";
 
 export const heading: TailwindProperties = {
   xl: "xl:px-80",

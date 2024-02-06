@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Default from "@/utils/interface";
-import TailwindProperties from "@/utils/tailwindProperties";
+import PropsInterface from "@/utils/propsInterface";
+import TailwindProperties from "@/styles/tailwindProperties";
 import { SetterOrUpdater, useRecoilState } from "recoil";
 import { authToken } from "@/libs/auth";
 
-function Navigator({ className }: Default) {
+function Navigator({ className }: PropsInterface) {
   const [token, setToken]: [null | string, SetterOrUpdater<any>] =
     useRecoilState(authToken);
   const id: string = "top-bar";

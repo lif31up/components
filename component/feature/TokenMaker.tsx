@@ -1,13 +1,13 @@
 "use client";
 
 import React from "react";
-import Default from "@/utils/interface";
+import PropsInterface from "@/utils/propsInterface";
 import { SetterOrUpdater, useRecoilState } from "recoil";
-import TailwindProperties from "@/utils/tailwindProperties";
+import TailwindProperties from "@/styles/tailwindProperties";
 // @ts-ignore
 import { authToken, handleLogin, handleLogout } from "@/libs/auth";
 
-function TokenMaker({ className }: Default) {
+function TokenMaker({ className }: PropsInterface) {
   const [token, setToken]: [null | string, SetterOrUpdater<any>] =
     useRecoilState(authToken);
   const setAtom = (value: string): void => {
@@ -45,7 +45,7 @@ function TokenMaker({ className }: Default) {
 }
 export default TokenMaker;
 
-function TokenStatusIndicator({ className }: Default) {
+function TokenStatusIndicator({ className }: PropsInterface) {
   const [token, setToken]: [null | string, any] = useRecoilState(authToken);
   return (
     <div className={`h-fit w-fit p-2 ${className}`}>

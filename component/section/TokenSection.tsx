@@ -2,14 +2,14 @@
 
 import React from "react";
 import Heading from "@/component/common/Heading";
-import TailwindProperties from "@/utils/tailwindProperties";
-import Default from "@/utils/interface";
+import TailwindProperties from "@/styles/tailwindProperties";
+import PropsInterface from "@/utils/propsInterface";
 import TokenMaker from "@/component/feature/TokenMaker";
 import { RecoilRoot } from "recoil";
 import Navigator from "@/component/common/Navigator";
 import { heading } from "@/styles/common";
 
-function TokenSection({ className }: Default) {
+function TokenSection({ className }: PropsInterface) {
   return (
     <RecoilRoot>
       <Navigator />

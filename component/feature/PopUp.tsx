@@ -1,9 +1,9 @@
 import React, { ReactPortal } from "react";
 import ReactDOM from "react-dom";
-import Default from "@/utils/interface";
-import TailwindProperties from "@/utils/tailwindProperties";
+import PropsInterface from "@/utils/propsInterface";
+import TailwindProperties from "@/styles/tailwindProperties";
 
-interface PopUp extends Default {
+interface PopUp extends PropsInterface {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;

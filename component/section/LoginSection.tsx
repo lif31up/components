@@ -1,10 +1,10 @@
 import React from "react";
-import Default from "@/utils/interface";
+import PropsInterface from "@/utils/propsInterface";
 import LoginWindow from "@/component/feature/LoginWindow";
 import Heading from "@/component/common/Heading";
 import { heading } from "@/styles/common";
 
-function LoginSection({ className }: Default) {
+function LoginSection({ className }: PropsInterface) {
   return (
     <section
       className={`${heading.xl} ${heading.lg} ${heading.md} ${heading.sm} ${heading.base} ${className}`}
