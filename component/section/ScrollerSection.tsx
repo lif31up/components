@@ -3,14 +3,13 @@ import HorizontalScroller from "@/component/feature/HorizontalScroller";
 import Default from "@/utils/interface";
 import TailwindProperties from "@/utils/tailwindProperties";
 import Heading from "@/component/common/Heading";
+import { heading } from "@/styles/common";
 
 function ScrollerSection({ className }: Default): React.JSX.Element {
-  const style: TailwindProperties = {
-    sm: "sm:w-full sm:px-80 sm:py-6 sm:bg-white",
-    base: "w-full px-6 bg-white py-2",
-  };
   return (
-    <section className={`${style.sm} ${style.base} ${className}`}>
+    <section
+      className={`${heading.xl} ${heading.lg} ${heading.md} ${heading.sm} ${heading.base} ${className}`}
+    >
       <Heading
         data={{
           filename: "ScrollerSection.tsx",

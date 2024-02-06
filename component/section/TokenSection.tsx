@@ -7,16 +7,15 @@ import Default from "@/utils/interface";
 import TokenMaker from "@/component/feature/TokenMaker";
 import { RecoilRoot } from "recoil";
 import Navigator from "@/component/common/Navigator";
+import { heading } from "@/styles/common";
 
 function TokenSection({ className }: Default) {
-  const style: TailwindProperties = {
-    sm: "sm:w-full sm:px-80 sm:py-6",
-    base: "w-full px-6 py-2",
-  };
   return (
     <RecoilRoot>
       <Navigator />
-      <section className={`${style.sm} ${style.base} ${className}`}>
+      <section
+        className={`${heading.xl} ${heading.lg} ${heading.md} ${heading.sm} ${heading.base} ${className}`}
+      >
         <Heading
           data={{
             filename: "TokenMaker.tsx",
