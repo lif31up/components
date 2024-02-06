@@ -13,7 +13,7 @@ interface Heading extends Default {
 function Heading({ className, data }: Heading) {
   const { filename, title, desc, href }: Data = data;
   const style: TailwindProperties = {
-    sm: "sm:my-16 sm:bg-neutral-100 p-4 sm:shadow sm:relative",
+    sm: "sm:my-16 p-4",
     base: "bg-neutral-100 shadow relative",
   };
   return (
