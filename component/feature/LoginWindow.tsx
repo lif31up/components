@@ -10,7 +10,7 @@ type FormData = {
   password: string;
 };
 
-function LoginWindow({ className }: Default): React.JSX.Element {
+function LoginWindow({ className }: Default) {
   const userData: React.MutableRefObject<FormData> = useRef({
     email: "",
     password: "",

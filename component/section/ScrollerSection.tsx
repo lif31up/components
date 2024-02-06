@@ -5,7 +5,7 @@ import TailwindProperties from "@/utils/tailwindProperties";
 import Heading from "@/component/common/Heading";
 import { heading } from "@/styles/common";
 
-function ScrollerSection({ className }: Default): React.JSX.Element {
+function ScrollerSection({ className }: Default) {
   return (
     <section
       className={`${heading.xl} ${heading.lg} ${heading.md} ${heading.sm} ${heading.base} ${className}`}

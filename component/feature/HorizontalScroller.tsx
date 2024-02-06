@@ -5,10 +5,7 @@ import Default from "@/utils/interface";
 interface HorizontalScroller extends Default {
   children: Array<React.ReactNode>;
 }
-function HorizontalScroller({
-  className,
-  children,
-}: HorizontalScroller): React.JSX.Element {
+function HorizontalScroller({ className, children }: HorizontalScroller) {
   const style: TailwindProperties = {
     sm: "sm:w-full sm:overflow-hidden",
     base: "w-full overflow-hidden",

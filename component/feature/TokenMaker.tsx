@@ -2,7 +2,7 @@
 
 import React from "react";
 import Default from "@/utils/interface";
-import { SetterOrUpdater, useRecoilState, useSetRecoilState } from "recoil";
+import { SetterOrUpdater, useRecoilState } from "recoil";
 import TailwindProperties from "@/utils/tailwindProperties";
 // @ts-ignore
 import { authToken, handleLogin, handleLogout } from "@/libs/auth";
