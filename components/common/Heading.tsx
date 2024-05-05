@@ -1,34 +1,36 @@
 import React from "react";
-import PropsInterface from "@/utils/propsInterface";
+import Default from "@/utils/propsInterface";
 import TailwindProperties from "@/styles/tailwindProperties";
-interface Data {
+
+type Data = {
   filename: string;
   title: string;
-  desc: string;
-  href: string;
-}
-interface Heading extends PropsInterface {
+  description: string;
+};
+interface Heading extends Default {
   data: Data;
 }
-function Heading({ className, data }: Heading) {
-  const { filename, title, desc, href }: Data = data;
-  const style: TailwindProperties = {
-    sm: "sm:my-16 p-4",
-    base: "bg-neutral-100 shadow relative",
-  };
+function Heading({ data, className }: Heading) {
+  const { filename, title, description }: Data = data;
   return (
-    <section className={`${style.sm} ${style.base} ${className}`}>
-      <h2 className="text-sm font-bold text-neutral-400 tracking-wider">
-        {filename}
-      </h2>
-      <h1 className="text-3xl font-bold text-gray-800 mt-8">{title}</h1>
-      <p className="text-sm font-medium text-neutral-500 mt-2">{desc}</p>
-      <a href={href} className="sm:absolute sm:top-0 sm:right-0">
-        <h1 className="w-fit py-4 px-4 text-white font-bold bg-green-400 rounded-2xl shadow sm:m-4 mt-8">
-          리포지토리로 이동
+    <div
+      className={`${heading.xl} ${heading.lg} ${heading.mb} ${heading.sm} ${heading.mb} ${heading.base} ${className}`}
+    >
+      <div className="flex justify-between items-end">
+        <h2 className="text-4xl text-neutral-800 select-none">{title}</h2>
+        <h1 className="w-fit h-fit py-2 px-4 text-xs text-right text-red-400 font-bold tracking-wider bg-neutral-100 select-none rounded-2xl border border-neutral-300">
+          {filename + ".tsx"}
         </h1>
-      </a>
-    </section>
+      </div>
+      <p className="text-base text-neutral-700 font-medium  mt-7">
+        {description}
+      </p>
+    </div>
   );
 }
 export default Heading;
+
+const heading: TailwindProperties = {
+  xl: "",
+  base: "",
+};

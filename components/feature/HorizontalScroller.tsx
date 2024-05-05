@@ -7,11 +7,11 @@ interface HorizontalScroller extends PropsInterface {
 }
 function HorizontalScroller({ className, children }: HorizontalScroller) {
   const style: TailwindProperties = {
-    sm: "sm:w-full sm:overflow-hidden",
+    xl: "xl:w-96 xl:overflow-hidden",
     base: "w-full overflow-hidden",
   };
   return (
-    <div className={`${style.sm} ${style.base} ${className}`}>
+    <div className={`${style.xl} ${style.base} ${className}`}>
       <div className="overflow-x-auto whitespace-nowrap snap-x">
         {children.map(
           (element: React.ReactNode, index: number): React.ReactNode => {
